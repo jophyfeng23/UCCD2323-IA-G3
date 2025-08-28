@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>HypeMotion_Malaysia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Ass1/Main_page/mainpage.css">
+
+</head>
+
+<script src="mainpage.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+
+
+<body>
+
+    <div class="main">
+
+        <a href="aboutus.html">
+            <img src="/Ass1/HypeMotion.png" alt=HypeMotion_Logo title="AboutUs">
+        </a>
+        <div class=" main-bar">
+            <ul>
+                <li><a href="/Ass1/Men/Men.html">Men</a></li>
+                <li><a href="/Ass1/Women/Women.html">Women</a></li>
+                <li><a href="/Ass1/Kids/Kids.html">Kids</a></li>
+                <li><a href="/Ass1/Accessories/Accessories.html">Accessories</a></li>
+                <li><a href="/Ass1/outlet.html">Outlets</a></li>
+                <li><a href="/Ass1/contact.html">Contact</a></li>
+
+            </ul>
+
+
+        </div>
+
+        <div class="search-bar">
+
+            <form action="search.html" method="GET" class="search-form">
+                <input type="text" name="query" placeholder="Search Products...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="Cart_Wishlist_User">
+            <a href="/Ass1/Favorite.html" title="Wishlist">
+                <i class="fa-regular fa-heart "></i>
+            </a>
+            <a href="/Ass1/cart.html" title="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a onclick="openLogin()" title="Login" id="loginBtn">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+
+
+        </div>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLogin()">&times;</span>
+                <h2>Member Login</h2>
+                <p> More Deal ! More Benefit !</p>
+                <form onsubmit="loginUser(event)">
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <p style="color: rgb(128, 128, 128);font-size: 15px;">By clicking Login,
+                        <br> You Agree to the Terms of Use.<br><br>
+                    </p>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="banner">
+        <img src="banner.jpg" alt="Banner-img" class="banner-img">
+    </div>
+
+
+    <div class="carousel-container">
+
+        <div class="container-header"> Latest & Greatest</div>
+
+        <div class="products">
+            <div class="product-box" data-price="199">
+                <img src="/Ass1/Product_Pic/product1.jpg" alt="Product 1">
+                <div class="product-title">Hype Sport Jacket</div>
+                <div class="product-desc">Versatile Garment that Bridges <br> the Gap between Casual and Formal Attire
+                </div>
+                <div class="product-price"><br>RM 199<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+
+
+            <div class="product-box" data-price="249">
+                <img src="/Ass1/Product_Pic/product2.jpeg" alt="Product 2">
+                <div class="product-title">Puma X Hype </div>
+                <div class="product-desc">Crossover Designed to Enhance Performance and Aesthetics</div>
+                <div class="product-price"><br>RM 249<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+
+            <div class="product-box" data-price="99">
+                <img src="/Ass1/Product_Pic/product3.jpg" alt="Product 3">
+                <div class="product-title">Merdeka Long Sleeve Jersey</div>
+                <div class="product-desc">Patriotism is the feeling of Love, Devotion, Sense of Attachment to our
+                    country</div>
+                <div class="product-price"><br>RM 99<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+
+            <div class="product-box" data-price="89">
+                <img src="/Ass1/Product_Pic/product4.jpeg" alt="Product 4">
+                <div class="product-title">Pickler Set</div>
+                <div class="product-desc">A Sport that Experiencing Explosive Growth Across Malaysia</div>
+                <div class="product-price"><br>RM 89<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+
+            <div class="product-box" data-price="49">
+                <img src="/Ass1/Product_Pic/product5.jpg" alt="Product 5">
+                <div class="product-title">Sport Short [Mens]</div>
+                <div class="product-desc">Feel the Comfort, Feel the Energy</div>
+                <div class="product-price"><br>RM 49<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+
+            <div class="product-box" data-price="149">
+                <img src="/Ass1/Product_Pic/product6.jpg" alt="Product 6">
+                <div class="product-title">Sportswear Set for Kids</div>
+                <div class="product-desc">Shop stylish and comfortable clothes for girls and boys</div>
+                <div class="product-price"><br>RM 149<br><br></div>
+                <button div class="addtocart" onclick="addToCartDynamic(this)">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+<footer>
+        <div class="bottominfo">
+            © HypeMotion Malaysia Inc<sup>®</sup> 2025. &nbsp; All right reserved. &nbsp;
+            <span class="footer-links">
+                <a href="/Ass1/blog.html">HypeMotion_Blog</a> &nbsp;|&nbsp;
+                <a href="https://www.facebook.com/" target="_blank" class="facebook"><i
+                        class="fab fa-facebook-f"></i></a> &nbsp;|&nbsp;
+                <a href="https://www.instagram.com/" target="_blank" class="instagram"><i
+                        class="fab fa-instagram"></i></a> &nbsp;|&nbsp;
+                <a href="https://www.tiktok.com/explore" target="_blank" class="tiktok"><i
+                        class="fab fa-tiktok"></i></a> &nbsp;|&nbsp;
+                <a href="https://x.com/" target="_blank" class="x"><i class="fab fa-twitter"></i></a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

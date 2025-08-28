@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background-color: #c3dfe9;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .empty-cart {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000;
+      margin-top: 20px;
+    }
+
+
+    .cart-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      border: 2px solid #000000;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+    }
+
+
+    .cart-item img {
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      margin-right: 20px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .cart-details {
+      flex-grow: 1;
+    }
+
+    .cart-details p {
+      margin: 5px 0;
+    }
+
+    .cart-details b {
+      font-size: 18px;
+      color: #222;
+    }
+
+    .price {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .remove-btn {
+      padding: 8px 12px;
+      border: none;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .remove-btn:hover {
+      background: #d33232;
+    }
+
+    #backbutton {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: 2px solid black;
+      transition: color 0.3s, background-color 0.3s, box-shadow 0.4s;
+
+
+    }
+
+    #backbutton:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(219, 21, 21);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.603);
+    }
+
+    #total {
+      display: none;
+      /* back to block */
+      width: fit-content;
+      /* shrink to text */
+      margin: 20px auto;
+      /* center horizontally */
+      font-size: 20px;
+      color: #000000;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 10px 16px;
+      font-weight: bold;
+    }
+
+
+    /* ✅ Responsive design */
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cart-item img {
+        margin: 0 0 10px 0;
+      }
+
+      .remove-btn {
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      #total {
+        text-align: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h2>Your Shopping Cart 🛒</h2>
+  <button id="backbutton" onclick="history.back()">⬅ Back to Prev</button>
+  <div class="cart-container" id="cart-container"></div>
+  <h3 id="total"></h3>
+
+
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.getElementById("cart-container");
+    let total = 0;
+
+    if (cart.length === 0) {
+      container.innerHTML = `<p class="empty-cart">Your Cart is Empty.<br><br>Continue Shopping to Find Great Products!</p>`;
+    } 
+    else {
+      cart.forEach((item, index) => {
+        total += item.price;
+        container.innerHTML += `
+          <div class="cart-item">
+            <img src="${item.img}" alt="${item.name}">
+            <div class="cart-details">
+              <p><b>${item.name}</b></p>
+              <p class="price">RM ${item.price}</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+          </div>
+        `;
+      });
+      let totalBox = document.getElementById("total");
+      totalBox.innerText = "Total: RM " + total;
+      totalBox.style.display = "block";
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>

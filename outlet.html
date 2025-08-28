@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HypeMotion_Malaysia</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #a2c8e0);
+        }
+
+        .outlet {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .outlet img {
+            height: 200px;
+            width: 215px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 3px solid black;
+        }
+
+        .outlet h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .store-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .store-list li {
+            position: relative;
+            background: #ffffffcc;
+            /* fallback */
+            margin: 15px 0;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 15px;
+            overflow: hidden;
+            /* prevent overflow */
+        }
+
+        /* shared background overlay */
+        .store-list li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            /* 30% transparent */
+            z-index: 0;
+        }
+
+        /* different photos for each store */
+        .pavilion::before {
+            background-image: url("/Ass1/outlet_pic/pav_pic.jpg");
+        }
+
+        .klcc::before {
+            background-image: url("/Ass1/outlet_pic/klcc.jpg");
+        }
+
+        .trx::before {
+            background-image: url("/Ass1/outlet_pic/trx.jpg");
+        }
+
+        .midvalley::before {
+            background-image: url("/Ass1/outlet_pic/midvalley.jpg");
+        }
+
+
+        .store-list h3,
+        .store-list p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .store-list h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .store-list p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .backhome {
+            display: inline-block;
+            margin-top: 30px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            font-weight: bold;
+            border: 2px solid black;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .backhome:hover {
+            color: #c91313;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: auto;
+            /* pushes footer down */
+            padding: 20px;
+        }
+
+        .bottominfo {
+            display: flex;
+            align-items: center;
+            /* vertical alignment */
+            justify-content: center;
+            /* center horizontally */
+            flex-wrap: wrap;
+            /* wrap on smaller screens */
+            font-size: 16px;
+            gap: 5px;
+        }
+
+
+        .footer-links a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 3px;
+
+        }
+
+
+        /* Brand colors */
+        .footer-links .facebook {
+            color: #1877F2;
+        }
+
+        .footer-links .instagram {
+            color: #E1306C;
+        }
+
+        .footer-links .tiktok {
+            color: #000000;
+        }
+
+        .footer-links .x {
+            color: #1DA1F2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outlet">
+
+        <img src="HypeMotion.png" alt="HypeMotion_Logo">
+
+        <h2>Find A Store</h2>
+
+        <ul class="store-list">
+            <li class="pavilion">
+                <h3>HypeMotion Pavilion</h3>
+                <p>
+                    Lot No. C5.03.00, Level 5, Pavilion KL <br>
+                    168, Jalan Bukit Bintang <br>
+                    Kuala Lumpur, 55100, Malaysia <br><br>
+                    <strong>Open at 10:00am • Closes at 10:00 pm</strong>
+                </p>
+            </li>
+
+            <li class="klcc">
+                <h3>HypeMotion KLCC</h3>
+                <p>
+                    332-334,3rd floor Suria <br>
+                    Kuala Lumpur City Centre, <br>50088 Kuala Lumpur, Malaysia <br><br>
+                    <strong>Open at 10:00am • Closes at 10:00 pm</strong>
+                </p>
+            </li>
+
+            <li class="trx">
+                <h3>HypeMotion TRX</h3>
+                <p>
+                    L2.77-2.79 Persiaran Tun Razak Exchange,<br> 55188 Kuala Lumpur <br><br>
+                    <strong>Open at 10:00am • Closes at 10:00 pm</strong>
+                </p>
+            </li>
+
+            <li class="midvalley">
+                <h3>HypeMotion Mid Valley</h3>
+                <p>
+                    T017,Mid Valley Megamall, Lingkaran Syed Putra, <br>59200 Kuala Lumpur <br><br>
+                    <strong>Open at 10:00am • Closes at 10:00 pm</strong>
+                </p>
+            </li>
+        </ul>
+
+        <a href="/Ass1/Main_page/Mainpage.html" class="backhome">Back To Home Page</a>
+    </div>
+
+    <footer>
+        <div class="bottominfo">
+            © HypeMotion Malaysia Inc<sup>®</sup> 2025. &nbsp; All right reserved. &nbsp;
+            <span class="footer-links">
+                <a href="/Ass1/blog.html">HypeMotion_Blog</a> &nbsp;|&nbsp;
+                <a href="https://www.facebook.com/" target="_blank" class="facebook"><i
+                        class="fab fa-facebook-f"></i></a> &nbsp;|&nbsp;
+                <a href="https://www.instagram.com/" target="_blank" class="instagram"><i
+                        class="fab fa-instagram"></i></a> &nbsp;|&nbsp;
+                <a href="https://www.tiktok.com/explore" target="_blank" class="tiktok"><i
+                        class="fab fa-tiktok"></i></a> &nbsp;|&nbsp;
+                <a href="https://x.com/" target="_blank" class="x"><i class="fab fa-twitter"></i></a>
+            </span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

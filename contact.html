@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HypeMotion Malaysia | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #c4d9e9);
+            color: #333;
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact-container h2 {
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a2a44;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            margin-bottom: 50px;
+            color: #444;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px 25px;
+            width: 280px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .info-box:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-box i {
+            font-size: 45px;
+            margin-bottom: 15px;
+            color: #aa182b;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .info-box:hover i {
+            color: #ffcc00;
+            transform: scale(1.2);
+        }
+
+        .info-box h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #1a2a44;
+        }
+
+        .info-box a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .info-box a:hover {
+            color: #aa182b;
+            text-decoration: underline;
+        }
+
+        .backhome {
+            display: inline-block;
+            margin-top: 25px;
+            color: #fff;
+            background: linear-gradient(135deg, #aa182b, #1a2a44);
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .backhome:hover {
+            background: linear-gradient(135deg, #ffcc00, #aa182b);
+            color: #1a2a44;
+            transform: scale(1.05);
+        }
+
+        /* Social Icons */
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            margin: 0 12px;
+            font-size: 24px;
+            color: #1a2a44;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #aa182b;
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #1a2a44;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Reach out to us through any of the following ways:</p>
+
+        <div class="contact-info">
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:sales@hypemotion.com">sales@hypemotion.com</a></p>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:03-71666888">+03-71666888</a></p>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Address</h3>
+                <p>HypeMotion HQ,<br> Kampar, Malaysia</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/explore"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <a href="/Ass1/Main_page/Mainpage.html" class="backhome">Back To Home Page</a>
+    </div>
+
+    <footer>
+        © HypeMotion Malaysia Inc<sup>®</sup> 2025. All rights reserved.
+    </footer>
+</body>
+</html>
